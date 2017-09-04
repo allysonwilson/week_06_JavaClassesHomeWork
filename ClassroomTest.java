@@ -5,11 +5,23 @@ import org.junit.*;
 public class ClassroomTest{
   Classroom classroom;
   Person student;
+  Teacher teacher;
+
+
+// write a method that teacher takes
+// a person out of classroom
 
 @Before
 public void before(){
   classroom = new Classroom("English");
   student = new Person();
+  teacher = new Teacher();
+}
+
+@Test
+public void teacherRemovesStudentFromClassroom(){
+
+  assertEquals(9 , classroom.studentCount() );
 }
 
 @Test
